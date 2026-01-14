@@ -25,7 +25,9 @@
 
 .product-media {
     position: relative;
+    background: #ffffff;
     height: 150%;
+    left: -10px;
     max-width: 50%;
     z-index: 1;
 }
@@ -35,6 +37,8 @@
     height: 100%;
     border-radius: 14px;
     object-fit: cover;
+
+
     transform: translateY(var(--parallax-offset, 0px));
     transition: transform 0.2s ease-out;
     filter: grayscale(100%) contrast(1.1);
@@ -77,8 +81,8 @@
         max-width: none;
         width: 110%;
         height: 400px;
+        max-height: 100%;
         overflow: hidden;
-    background: #ffffff;
     }
 
     /* .product-media img { */

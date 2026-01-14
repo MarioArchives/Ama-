@@ -18,7 +18,9 @@ export const Header = () => {
     return (
         <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
             <div className="brand">
-                <span className="brand-mark">Ama</span>
+                <div className="brand-mark-holder">
+                    <span className="brand-mark">Ama</span><span className="brand-mark-b">zonas</span>
+                </div>
                 <span className="brand-sub">Amazonian cosmetics</span>
             </div>
             <nav className="nav">
