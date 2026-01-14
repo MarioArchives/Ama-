@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { ProductCard } from '../../components/ProductCard/ProductCard'
 import '../../styles/common.css'
 import './Products.css'
 
@@ -45,21 +46,27 @@ export const Products = () => {
         <h2>Vegan, organic blends for face, lips, and body.</h2>
       </div>
       <div className="product-grid">
-        <article className="product-card" data-depth="0.06">
-          <h3>Rainforest Balm</h3>
-          <p>Cupuaçu, maracuja, and cacao for plush, edible-grade moisture.</p>
-          <span>Universal balm</span>
-        </article>
-        <article className="product-card" data-depth="0.08">
-          <h3>Amazon Nectar</h3>
-          <p>Buriti, acai, and citrus peel for bright, soft skin.</p>
-          <span>Face + neck oil</span>
-        </article>
-        <article className="product-card" data-depth="0.1">
-          <h3>Forest Lip Melt</h3>
-          <p>Murumuru butter, vanilla pod, and a hint of wild lime.</p>
-          <span>Lip treatment</span>
-        </article>
+        <ProductCard
+          title="Rainforest Balm"
+          description="Cupuaçu, maracuja, and cacao for plush, edible-grade moisture."
+          label="Universal balm"
+          imageSrc="/product.png"
+          depth={0.06}
+        />
+        <ProductCard
+          title="Amazon Nectar"
+          description="Buriti, acai, and citrus peel for bright, soft skin."
+          label="Face + neck oil"
+          imageSrc="/product.png"
+          depth={0.08}
+        />
+        <ProductCard
+          title="Forest Lip Melt"
+          description="Murumuru butter, vanilla pod, and a hint of wild lime."
+          label="Lip treatment"
+          imageSrc="/product.png"
+          depth={0.1}
+        />
       </div>
     </section>
   )

@@ -5,42 +5,42 @@ export const Loading = () => {
     <div className="loading" role="status" aria-live="polite">
       <svg
         className="loading-mark"
-        viewBox="0 0 200 300"
+        viewBox="0 -40 200 300"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path
-          className="loading-outline"
-          d="
-            M62 120
-            Q62 104 80 104
-            H120
-            Q138 104 138 120
-            V236
-            Q138 252 120 252
-            H80
-            Q62 252 62 236
-            Z
-          "
-        />
-        <path className="loading-outline" d="M78 104 V88 H122 V104" />
-        <path className="loading-outline" d="M78 92 H122" />
         <g id="dropper" className="loading-dropper">
           <path
-            className="loading-outline"
             d="
-              M88 42
-              Q100 26 112 42
-              V58
-              Q112 66 100 70
-              Q88 66 88 58
-              Z
+              M100 16
+              C78 16 66 34 66 50
+              C66 66 78 84 100 84
+              C122 84 134 66 134 50
+              C134 34 122 16 100 16Z
             "
+            fill="currentColor"
           />
-          <path className="loading-outline" d="M82 70 H118 V88 H82 Z" />
-          <rect className="loading-outline" x="94" y="88" width="12" height="78" rx="6" />
-          <path className="loading-outline" d="M92 172 Q100 178 108 172" />
+          <rect x="66" y="84" width="68" height="20" rx="8" fill="currentColor" />
+          <rect x="90" y="104" width="20" height="22" rx="10" fill="currentColor" />
+          <rect x="97" y="126" width="6" height="90" rx="3" fill="currentColor" />
         </g>
+        <path
+          d="
+            M48 126
+            C48 112 60 104 76 104
+            H124
+            C140 104 152 112 152 126
+            V208
+            C152 230 130 244 100 244
+            C70 244 48 230 48 208
+            Z
+          "
+          fill="currentColor"
+        />
+        <rect className="loading-label" x="56" y="156" width="88" height="54" rx="12" />
+        <rect x="70" y="170" width="60" height="4" rx="2" fill="currentColor" opacity="0.35" />
+        <rect x="70" y="180" width="48" height="4" rx="2" fill="currentColor" opacity="0.25" />
+        <rect x="70" y="190" width="54" height="4" rx="2" fill="currentColor" opacity="0.2" />
       </svg>
       <span className="loading-text">Loading the collection</span>
     </div>
