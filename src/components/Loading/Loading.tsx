@@ -1,4 +1,6 @@
-function Loading() {
+import "./Loading.css";
+
+export const Loading = () => {
   return (
     <div className="loading" role="status" aria-live="polite">
       <svg
@@ -43,6 +45,4 @@ function Loading() {
       <span className="loading-text">Loading the collection</span>
     </div>
   )
-}
-
-export default Loading
+};

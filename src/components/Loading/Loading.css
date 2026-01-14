@@ -1,0 +1,64 @@
+.loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--text-strong);
+  text-align: center;
+}
+
+.loading-mark {
+  width: min(220px, 60vw);
+  height: auto;
+}
+
+.loading-outline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 900;
+  animation: loading-draw 3s ease-in-out infinite;
+}
+
+.loading-dropper {
+  transform-origin: center;
+  animation: loading-open-close 3s ease-in-out infinite;
+}
+
+.loading-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+@keyframes loading-open-close {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30%,
+  70% {
+    transform: translateY(-26px);
+  }
+}
+
+@keyframes loading-draw {
+  0% {
+    stroke-dashoffset: 900;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

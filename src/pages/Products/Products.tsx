@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
+import '../../styles/common.css'
+import './Products.css'
 
-function Products() {
+export const Products = () => {
   useEffect(() => {
     const cards = Array.from(document.querySelectorAll<HTMLElement>('.product-card'))
     if (!cards.length) {
@@ -62,5 +64,3 @@ function Products() {
     </section>
   )
 }
-
-export default Products

@@ -1,0 +1,40 @@
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 22px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+}
+
+.contact-title {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.contact-note {
+  color: var(--text-subtle);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .contact-actions {
+    width: 100%;
+  }
+
+  .contact-actions .primary {
+    width: 100%;
+    text-align: center;
+  }
+}

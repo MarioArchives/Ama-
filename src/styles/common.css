@@ -1,0 +1,49 @@
+.section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4.5rem;
+}
+
+.section-header h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.8rem 0 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.primary {
+  background: linear-gradient(120deg, #0f0f0f, #2a2a2a);
+  color: #f6f6f6;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-strong);
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--accent);
+}

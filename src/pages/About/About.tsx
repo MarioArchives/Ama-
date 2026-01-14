@@ -1,4 +1,7 @@
-function About() {
+import '../../styles/common.css'
+import './About.css'
+
+export const About = () => {
   return (
     <section className="section about">
       <div className="section-header">
@@ -20,5 +23,3 @@ function About() {
     </section>
   )
 }
-
-export default About

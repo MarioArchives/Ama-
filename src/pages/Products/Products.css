@@ -1,0 +1,64 @@
+.products .product-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.product-card {
+  position: relative;
+  background: var(--bg-panel);
+  border-radius: 18px;
+  padding: 2.25rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 300px;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background-image: url("/product.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+  transform: translateY(var(--parallax-offset, 0px));
+  transition: transform 0.2s ease-out;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.product-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:hover {
+  background: #111111;
+  color: #f6f6f6;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.product-card:hover::before {
+  opacity: 0.12;
+}
+
+.product-card:hover span {
+  color: rgba(246, 246, 246, 0.75);
+}
+
+.product-card h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+.product-card span {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+}

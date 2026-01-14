@@ -1,4 +1,7 @@
-function Contact() {
+import '../../styles/common.css'
+import './Contact.css'
+
+export const Contact = () => {
   return (
     <section className="section contact">
       <div className="section-header">
@@ -21,5 +24,3 @@ function Contact() {
     </section>
   )
 }
-
-export default Contact
