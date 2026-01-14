@@ -42,23 +42,23 @@ export const Products = () => {
     <section className="section products">
       <div className="section-header">
         <p className="eyebrow">Our Products</p>
-        <h2>Curated oils for skin, space, and spirit.</h2>
+        <h2>Vegan, organic blends for face, lips, and body.</h2>
       </div>
       <div className="product-grid">
         <article className="product-card" data-depth="0.06">
-          <h3>Verdant Veil</h3>
-          <p>Green fig, pine sap, and wild sage for grounding rituals.</p>
-          <span>Body + pulse oil</span>
+          <h3>Rainforest Balm</h3>
+          <p>Cupuaçu, maracuja, and cacao for plush, edible-grade moisture.</p>
+          <span>Universal balm</span>
         </article>
         <article className="product-card" data-depth="0.08">
-          <h3>Nocturne Bloom</h3>
-          <p>Black orchid, tonka bean, and ambered moss.</p>
-          <span>Evening glow blend</span>
+          <h3>Amazon Nectar</h3>
+          <p>Buriti, acai, and citrus peel for bright, soft skin.</p>
+          <span>Face + neck oil</span>
         </article>
         <article className="product-card" data-depth="0.1">
-          <h3>Obsidian Aura</h3>
-          <p>Charred cedar, bergamot peel, and velvet patchouli.</p>
-          <span>Room + linen mist</span>
+          <h3>Forest Lip Melt</h3>
+          <p>Murumuru butter, vanilla pod, and a hint of wild lime.</p>
+          <span>Lip treatment</span>
         </article>
       </div>
     </section>
