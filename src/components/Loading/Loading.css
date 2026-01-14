@@ -16,13 +16,19 @@
     color: var(--text-strong);
 }
 
+.loading-outline {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 800;
+    animation: loading-draw 3s ease-in-out infinite;
+}
+
 .loading-dropper {
     transform-origin: center;
     animation: loading-open-close 3s ease-in-out infinite;
-}
-
-.loading-label {
-    fill: var(--bg-elevated);
 }
 
 .loading-text {
@@ -41,6 +47,22 @@
 
     30%,
     70% {
-        transform: translateY(-40px);
+        transform: translateY(-28px);
+    }
+}
+
+@keyframes loading-draw {
+    0% {
+        stroke-dashoffset: 800;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40%,
+    100% {
+        stroke-dashoffset: 0;
     }
 }
