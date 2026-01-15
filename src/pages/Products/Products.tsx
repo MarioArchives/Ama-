@@ -47,17 +47,19 @@ export const Products = () => {
       </div>
       <div className="product-grid">
         <ProductCard
-          title="Rainforest Balm"
+          title="Camendula"
           description="Cupuaçu, maracuja, and cacao for plush, edible-grade moisture."
           label="Universal balm"
-          imageSrc="/product.png"
+          imageSrc="/calenduala_image.png"
+          imageAlt="Calendula botanicals"
           depth={0.06}
         />
         <ProductCard
-          title="Amazon Nectar"
+          title="Sacha Inchi"
           description="Buriti, acai, and citrus peel for bright, soft skin."
           label="Face + neck oil"
-          imageSrc="/product.png"
+          imageSrc="/sacha_inchi_image.png"
+          imageAlt="Sacha inchi seeds"
           depth={0.08}
         />
         <ProductCard
