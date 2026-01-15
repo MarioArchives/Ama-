@@ -51,7 +51,7 @@
 
     transform: translateY(var(--parallax-offset, 0px));
     transition: transform 0.2s ease-out;
-    filter: grayscale(100%) contrast(1.1);
+    /* filter: grayscale(100%) contrast(1.1); */
 }
 
 .product-content {
