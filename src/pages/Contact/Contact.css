@@ -1,3 +1,19 @@
+.contact-copy {
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.contact .section-header h2 {
+  text-align: center;
+}
+
+.contact .section-header .eyebrow {
+  text-align: left;
+}
+
 .contact-card {
   display: flex;
   flex-direction: column;

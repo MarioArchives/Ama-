@@ -39,7 +39,7 @@ export const Home = () => {
         <>
             <section className="hero">
                 <div className="hero-content">
-                    <h1>Effective natural, safe</h1>
+                    <h1>Effective, natural, and safe</h1>
                     <HeroSlider slides={slides} />
                     <p className="hero-copy">
                         Ama is a skincare studio sourcing botanicals grown in Lancaster, England and the Colombian Amazon. Our oils are rich in natural retinol, vitamins A & E, omegas, essential fatty acids, flavonoids and carotenoids. Slow-made for healthy skin, lips, hair and daily ritual.
@@ -55,7 +55,7 @@ export const Home = () => {
             <section className="section tagline">
                 <div className="section-header">
                     <h2>No overpowering scents. Just natural. Just real.</h2>
-                    <p>
+                    <p id="home-footer-body">
                         Our oils absorb quickly, delivering deep hydration and nourishment to skin, hair and nails. The result is visibly healthier and more resilient beauty. Rooted in nature, backed by science.
                     </p>
                 </div>

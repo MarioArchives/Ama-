@@ -148,6 +148,28 @@
     color: rgba(246, 246, 246, 0.85);
 }
 
+.inquire-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 1.8rem;
+    background: linear-gradient(120deg, #0f0f0f, #2a2a2a);
+    color: #f6f6f6;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.inquire-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
 /* Scrollbar styling */
 .product-detail-modal::-webkit-scrollbar {
     width: 8px;

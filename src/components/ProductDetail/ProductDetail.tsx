@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { Link } from 'react-router-dom'
 import productsData from '../../data/products_data.json'
 import './ProductDetail.css'
 
@@ -62,6 +63,10 @@ export const ProductDetail = ({ productTitle, onClose }: ProductDetailProps) => 
                 <p>{product.detailedDescription}</p>
               </div>
             )}
+
+            <Link to="/contact" className="inquire-button" onClick={onClose}>
+              Enquire
+            </Link>
           </div>
         </div>
       </div>
