@@ -3,5 +3,15 @@
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     color: var(--text-muted);
-    font-size: 30px;
+    font-size: 1rem;
+}
+
+
+@media (width > 720px) {
+
+    .about-grid {
+
+        font-size: 1.5rem;
+    }
+
 }

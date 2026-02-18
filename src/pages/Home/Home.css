@@ -75,8 +75,15 @@
     }
 
     .hero-content h1 {
-        margin: 0;
-        margin-top: 1rem;
-        width: 125%;
+        /*     margin: 0; */
+        /*     margin-top: 1rem; */
+        /*     width: 125%; */
+        margin-bottom: 2rem;
+        font-size: 23px;
     }
+
+    .hero-copy {
+        font-size: 15px;
+    }
+
 }

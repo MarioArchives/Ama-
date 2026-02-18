@@ -82,6 +82,7 @@
         gap: 2.5rem;
         left: 0;
         overflow: hidden;
+        width: 80vw;
     }
 
     .product-media {
@@ -123,6 +124,7 @@
     .product-media {
         position: relative;
         left: 0;
+        top: -20px;
         max-width: none;
         max-height: none;
         width: 100%;
@@ -132,7 +134,7 @@
     }
 
     .product-media img {
-        height: 130%;
+        height: 120%;
     }
 
     .product-content {
