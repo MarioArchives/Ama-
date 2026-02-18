@@ -43,10 +43,18 @@
         font-size: 1.1rem;
         min-height: 100px;
     }
+
+    .key-features {
+        margin: 0;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .features-grid {
         grid-template-columns: 1fr;
+    }
+
+    .key-features {
+        margin: 0;
     }
 }

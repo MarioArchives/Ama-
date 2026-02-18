@@ -110,3 +110,45 @@
     }
 
 }
+
+@media (max-width: 500px) {
+    .product-card {
+        flex-direction: column;
+        height: 50vh;
+        gap: 0rem;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .product-media {
+        position: relative;
+        left: 0;
+        max-width: none;
+        max-height: none;
+        width: 100%;
+        overflow: hidden;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .product-media img {
+        height: 130%;
+    }
+
+    .product-content {
+        width: 100%;
+        padding: 2rem;
+
+        font-size: 0.8rem;
+
+        /* padding-top: 0; */
+
+        /* height: 50%; */
+
+    }
+
+    .product-content h3 {
+        font-size: 1.5rem;
+    }
+
+}
