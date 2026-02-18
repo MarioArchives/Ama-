@@ -1,3 +1,8 @@
+.products {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .products .product-grid {
     display: grid;
     margin-top: 6vw;

@@ -1,3 +1,8 @@
+.about {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .about-grid {
     display: grid;
     gap: 1.5rem;

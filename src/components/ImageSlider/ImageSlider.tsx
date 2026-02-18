@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
-import "./HeroSlider.css";
+import "./ImageSlider.css";
 
 type Slide = {
     src: string;
     alt: string;
+    caption?: string;
 };
 
-type HeroSliderProps = {
+type ImageSliderProps = {
     slides: Slide[];
     intervalMs?: number;
 };
 
-export const HeroSlider = ({ slides, intervalMs = 4500 }: HeroSliderProps) => {
+export const ImageSlider = ({ slides, intervalMs = 4500 }: ImageSliderProps) => {
     const [activeSlide, setActiveSlide] = useState(0);
 
     useEffect(() => {
@@ -27,19 +28,22 @@ export const HeroSlider = ({ slides, intervalMs = 4500 }: HeroSliderProps) => {
     }, [intervalMs, slides.length]);
 
     return (
-        <div className="hero-slider" aria-label="Featured botanicals">
-            <div className="hero-slider-track">
+        <div className="image-slider" aria-label="Featured botanicals">
+            <div className="image-slider-track">
                 {slides.map((slide, index) => (
                     <div
                         key={slide.src}
-                        className={`hero-slide${index === activeSlide ? " is-active" : ""}`}
+                        className={`image-slide${index === activeSlide ? " is-active" : ""}`}
                     >
                         <img src={slide.src} alt={slide.alt} />
+                        {slide.caption && (
+                            <span className="image-slide-caption">{slide.caption}</span>
+                        )}
                     </div>
                 ))}
             </div>
             {slides.length > 1 && (
-                <div className="hero-slider-dots" role="tablist">
+                <div className="image-slider-dots" role="tablist">
                     {slides.map((slide, index) => (
                         <button
                             key={`${slide.src}-dot`}

@@ -75,6 +75,13 @@
     font-size: 0.7rem;
 }
 
+@media (width > 1500px) {
+    .product-card {
+        width: 40vw;
+        height: 60vh;
+    }
+}
+
 @media (max-width: 720px) {
     .product-card {
         flex-direction: column;
