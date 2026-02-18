@@ -3,7 +3,7 @@ import './About.css'
 
 export const About = () => {
   return (
-    <section className="section about">
+    <section className="section about margined-content">
       <div className="section-header">
         <p className="eyebrow">About</p>
         <h2>Amazon and British-grown. Truly edible.</h2>

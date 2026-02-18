@@ -14,7 +14,7 @@ export const KeyFeatures = () => {
   ]
 
   return (
-    <section className="section key-features">
+    <section className="section key-features margined-content">
       <div className="section-header">
         <p className="eyebrow">Key Features</p>
       </div>

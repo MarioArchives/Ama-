@@ -43,7 +43,7 @@ export const Products = () => {
   }, [])
 
   return (
-    <section className="section products">
+    <section className="section products margined-content">
       <div className="section-header">
         <p className="eyebrow">Our products</p>
       </div>
