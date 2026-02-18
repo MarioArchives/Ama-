@@ -1,9 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ProductCard } from '../../components/ProductCard/ProductCard'
+import { ProductDetail } from '../../components/ProductDetail/ProductDetail'
+import productsData from '../../data/products_data.json'
 import '../../styles/common.css'
 import './Products.css'
 
 export const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null)
   useEffect(() => {
     const cards = Array.from(document.querySelectorAll<HTMLElement>('.product-card'))
     if (!cards.length) {
@@ -42,34 +45,27 @@ export const Products = () => {
   return (
     <section className="section products">
       <div className="section-header">
-        <p className="eyebrow">Our Products</p>
-        <h2>Vegan, organic blends for face, lips, and body.</h2>
+        <p className="eyebrow">Our products</p>
       </div>
       <div className="product-grid">
-        <ProductCard
-          title="Camendula"
-          description="Cupuaçu, maracuja, and cacao for plush, edible-grade moisture."
-          label="Universal balm"
-          imageSrc="/calenduala_image.png"
-          imageAlt="Calendula botanicals"
-          depth={0.06}
-        />
-        <ProductCard
-          title="Sacha Inchi"
-          description="Buriti, acai, and citrus peel for bright, soft skin."
-          label="Face + neck oil"
-          imageSrc="/sacha_inchi_image.png"
-          imageAlt="Sacha inchi seeds"
-          depth={0.08}
-        />
-        <ProductCard
-          title="Forest Lip Melt"
-          description="Murumuru butter, vanilla pod, and a hint of wild lime."
-          label="Lip treatment"
-          imageSrc="/product.png"
-          depth={0.1}
-        />
+        {productsData.map((product) => (
+          <ProductCard
+            key={product.id}
+            title={product.title}
+            description={product.description}
+            imageSrc={product.imageSrc}
+            imageAlt={product.imageAlt}
+            depth={product.depth}
+            onClick={() => setSelectedProduct(product.title)}
+          />
+        ))}
       </div>
+      {selectedProduct && (
+        <ProductDetail
+          productTitle={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </section>
   )
 }

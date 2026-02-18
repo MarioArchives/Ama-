@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FindUsSection } from "../../components/FindUsSection/FindUsSection";
 import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
+import { KeyFeatures } from "../../components/KeyFeatures/KeyFeatures";
 import { Loading } from "../../components/Loading/Loading";
 import "../../styles/common.css";
 import "./Home.css";
@@ -35,24 +36,28 @@ export const Home = () => {
         <>
             <section className="hero">
                 <div className="hero-content">
-                    <p className="eyebrow">Small-batch cosmetics from the Amazon to Britain</p>
-                    <h1>Pure botanicals, made to be worn and tasted.</h1>
+                    <h1>Effective natural, safe</h1>
                     <HeroSlider slides={slides} />
                     <p className="hero-copy">
-                        Ama is an artisanal cosmetics studio sourcing Amazon-grown botanicals
-                        and crafting them in Britain. Every formula is vegan, organic, and so
-                        natural it can be eaten. Slow-made for skin, lips, and daily ritual.
+                        Ama is a skincare studio sourcing botanicals grown in Lancaster, England and the Colombian Amazon. Our oils are rich in natural retinol, vitamins A & E, omegas, essential fatty acids, flavonoids and carotenoids. Slow-made for healthy skin, lips, hair and daily ritual.
+                    </p>
+                    <p className="hero-copy">
+                        Each oil is created in small batches using only high-quality flowers and seeds. Vegan, unrefined, free from synthetic additives, community-based and fully traceable. Our products are so natural they can be eaten, and are laboratory-tested for safety and efficacy.
                     </p>
                 </div>
             </section>
 
-            <section className="section find-us">
+            <KeyFeatures />
+
+            <section className="section tagline">
                 <div className="section-header">
-                    <p className="eyebrow">Find us</p>
-                    <h2>Meet Ama in studios and slow-living shops.</h2>
+                    <h2>No overpowering scents. Just natural. Just real.</h2>
+                    <p>
+                        Our oils absorb quickly, delivering deep hydration and nourishment to skin, hair and nails. The result is visibly healthier and more resilient beauty. Rooted in nature, backed by science.
+                    </p>
                 </div>
-                <FindUsSection />
             </section>
+
         </>
     );
 };
