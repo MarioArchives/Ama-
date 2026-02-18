@@ -65,3 +65,10 @@
         min-height: 240px;
     }
 }
+
+@media (width > 900px) {
+    .hero-slider {
+        height: 60vh;
+
+    }
+}

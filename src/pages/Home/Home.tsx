@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FindUsSection } from "../../components/FindUsSection/FindUsSection";
 import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
 import { KeyFeatures } from "../../components/KeyFeatures/KeyFeatures";
 import { Loading } from "../../components/Loading/Loading";
@@ -11,12 +10,16 @@ export const Home = () => {
 
     const slides = [
         {
-            src: "/calenduala_image.png",
+            src: "/calendula.png",
             alt: "Calendula botanicals",
         },
         {
-            src: "/sacha_inchi_image.png",
+            src: "/Sacha inchi.png",
             alt: "Sacha inchi seeds",
+        },
+        {
+            src: "/cacay.png",
+            alt: "Cacay oil",
         },
     ];
 

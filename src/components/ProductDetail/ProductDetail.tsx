@@ -40,7 +40,7 @@ export const ProductDetail = ({ productTitle, onClose }: ProductDetailProps) => 
 
         <div className="product-detail-content">
           <div className="product-detail-image">
-            <img src={product.imageSrc} alt={product.imageAlt} />
+            <img src={product.detailImageSrc ?? product.imageSrc} alt={product.imageAlt} />
           </div>
 
           <div className="product-detail-info">
