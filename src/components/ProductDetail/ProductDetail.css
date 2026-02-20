@@ -160,6 +160,33 @@
     color: rgba(246, 246, 246, 0.85);
 }
 
+.usage-instructions {
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    color: rgba(246, 246, 246, 0.85);
+}
+
+.usage-tips-title {
+    margin-top: 0.5rem;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #f6f6f6;
+}
+
+.usage-tips {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.usage-tips li {
+    color: rgba(246, 246, 246, 0.85);
+    line-height: 1.6;
+}
+
 .inquire-button {
     display: inline-block;
     margin-top: 1rem;

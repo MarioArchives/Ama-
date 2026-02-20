@@ -5,79 +5,93 @@ import productsData from '../../data/products_data.json'
 import './ProductDetail.css'
 
 type ProductDetailProps = {
-  productTitle: string
-  onClose: () => void
+    productTitle: string
+    onClose: () => void
 }
 
 export const ProductDetail = ({ productTitle, onClose }: ProductDetailProps) => {
-  const product = productsData.find((p) => p.title === productTitle)
+    const product = productsData.find((p) => p.title === productTitle)
 
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose()
-      }
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                onClose()
+            }
+        }
+
+        document.addEventListener('keydown', handleEscape)
+        document.body.style.overflow = 'hidden'
+
+        return () => {
+            document.removeEventListener('keydown', handleEscape)
+            document.body.style.overflow = 'unset'
+        }
+    }, [onClose])
+
+    if (!product) {
+        return null
     }
 
-    document.addEventListener('keydown', handleEscape)
-    document.body.style.overflow = 'hidden'
+    return createPortal(
+        <div className="product-detail-overlay" onClick={onClose}>
+            <div className="product-detail-modal" onClick={(e) => e.stopPropagation()}>
+                <button className="close-button" onClick={onClose} aria-label="Close">
+                    ×
+                </button>
 
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
-    }
-  }, [onClose])
+                <div className="product-detail-content">
+                    <div className="product-detail-image">
+                        <img src={product.detailImageSrc ?? product.imageSrc} alt={product.imageAlt} />
+                    </div>
 
-  if (!product) {
-    return null
-  }
+                    <div className="product-detail-info">
+                        <h2>{product.title}</h2>
+                        {(product.scientificName || product.scientistName) && (
+                            <p className="scientific-name">
+                                {product.scientificName && (
+                                    <span className="scientific-name__species">{product.scientificName}</span>
+                                )}
+                                {product.scientistName && (
+                                    <span className="scientific-name__authority"> {product.scientistName}</span>
+                                )}
+                            </p>
+                        )}
 
-  return createPortal(
-    <div className="product-detail-overlay" onClick={onClose}>
-      <div className="product-detail-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose} aria-label="Close">
-          ×
-        </button>
+                        <p className="description">{product.description}</p>
 
-        <div className="product-detail-content">
-          <div className="product-detail-image">
-            <img src={product.detailImageSrc ?? product.imageSrc} alt={product.imageAlt} />
-          </div>
+                        {product.sizes && <p className="sizes"><strong>Sizes:</strong> {product.sizes}</p>}
+                        {product.validity && (
+                            <p className="validity"><strong>Validity:</strong> {product.validity}</p>
+                        )}
+                        <Link to="/contact" className="inquire-button" onClick={onClose}>
+                            Enquire
+                        </Link>
 
-          <div className="product-detail-info">
-            <h2>{product.title}</h2>
-            {(product.scientificName || product.scientistName) && (
-              <p className="scientific-name">
-                {product.scientificName && (
-                  <span className="scientific-name__species">{product.scientificName}</span>
-                )}
-                {product.scientistName && (
-                  <span className="scientific-name__authority"> {product.scientistName}</span>
-                )}
-              </p>
-            )}
 
-            <p className="description">{product.description}</p>
+                        {product.detailedDescription && (
+                            <div className="detailed-section">
+                                <h3>Details</h3>
+                                <p>{product.detailedDescription}</p>
+                            </div>
+                        )}
 
-            {product.sizes && <p className="sizes"><strong>Sizes:</strong> {product.sizes}</p>}
-            {product.validity && (
-              <p className="validity"><strong>Validity:</strong> {product.validity}</p>
-            )}
+                        {product.usage && (
+                            <div className="detailed-section">
+                                <h3>How to use</h3>
+                                <p className="usage-instructions">{product.usage.instructions}</p>
+                                <h4 className="usage-tips-title">Tips to Keep Your Natural Oil Fresh</h4>
+                                <ul className="usage-tips">
+                                    {product.usage.tips.map((tip, i) => (
+                                        <li key={i}>{tip}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
-            {product.detailedDescription && (
-              <div className="detailed-section">
-                <h3>Details</h3>
-                <p>{product.detailedDescription}</p>
-              </div>
-            )}
-
-            <Link to="/contact" className="inquire-button" onClick={onClose}>
-              Enquire
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>,
-    document.body
-  )
+                    </div>
+                </div>
+            </div>
+        </div>,
+        document.body
+    )
 }

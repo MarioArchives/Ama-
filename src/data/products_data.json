@@ -6,7 +6,17 @@
     "scientistName": "H. Karst.",
     "description": "Lightweight and fast-absorbing, Cacay oil reduces the appearance of fine lines, leaves skin looking visibly smoother, radiant, and revitalized.",
     "sizes": "15ml & 25ml",
+    "validity": "validity one year after opening",
     "detailedDescription": "Cacay oil is a precious plant-based source of natural retinol (vitamin A), combined with vitamin E and linoleic acid. This powerful combination helps boost skin renewal, smooth texture, and reduces the appearance of fine lines. Its antioxidant-rich profile protects skin from environmental stressors while keeping it hydrated and nourished.",
+    "usage": {
+      "instructions": "Apply 2–4 drops to clean, slightly damp skin. Gently press into face and neck until absorbed. Use morning and/or night. Follow with sunscreen during the day.",
+      "tips": [
+        "Store in a cool, dark place.",
+        "Close the bottle tightly after each use.",
+        "Use clean hands or a dropper to avoid contamination.",
+        "Use within 1 year after opening for best results."
+      ]
+    },
     "imageSrc": "/cacay.png",
     "detailImageSrc": "/cacay_closeup.jpeg",
     "imageAlt": "Cacay oil",
@@ -21,6 +31,15 @@
     "sizes": "15ml & 25ml",
     "validity": "validity one year after opening",
     "detailedDescription": "Sacha Inchi oil is naturally rich in omega-3, omega-6 and omega-9 fatty acids that support the skin barrier, boost hydration and maintain elasticity. Its natural vitamin E and antioxidants help protect against environmental stress, while its lightweight texture soothes and comforts skin, leaving it soft, smooth and balanced.",
+    "usage": {
+      "instructions": "Apply 2–4 drops to clean, slightly damp skin. Gently press into face and neck until absorbed. Use morning and/or night. Follow with sunscreen during the day.",
+      "tips": [
+        "Store in a cool, dark place.",
+        "Close the bottle tightly after each use.",
+        "Use clean hands or a dropper to avoid contamination.",
+        "Use within 1 year after opening for best results."
+      ]
+    },
     "imageSrc": "/Sacha inchi.png",
     "detailImageSrc": "/Sacha_inchi_closeup.jpeg",
     "imageAlt": "Sacha inchi seeds",
@@ -33,7 +52,17 @@
     "scientistName": "L.",
     "description": "Soothes and calms the skin, supporting repair and reducing redness, while nourishing with omega fatty acids and antioxidants to maintain hydration, softness, and a healthy-looking complexion.",
     "sizes": "15ml & 25ml",
+    "validity": "validity one year after opening",
     "detailedDescription": "This blend combines Calendula flowers - valued for their anti-inflammatory, antioxidant and antimicrobial properties - with Sacha Inchi oil, rich in omega-3, omega-6 and vitamin E. Calendula supports skin repair, helps reduce redness, and promotes fibroblast activity and collagen synthesis, aiding tissue regeneration and comfort. Sacha Inchi oil nourishes and strengthens the skin barrier, boosts hydration, and provides antioxidant protection. Together, they help keep skin soft, hydrated and healthy-looking while calming irritation and supporting resilience.",
+    "usage": {
+      "instructions": "Apply 2–4 drops to clean, slightly damp skin. Gently press into face and neck until absorbed. Use morning and/or night. Follow with sunscreen during the day.",
+      "tips": [
+        "Store in a cool, dark place.",
+        "Close the bottle tightly after each use.",
+        "Use clean hands or a dropper to avoid contamination.",
+        "Use within 1 year after opening for best results."
+      ]
+    },
     "imageSrc": "/calendula.png",
     "detailImageSrc": "/calendula_closeup.jpeg",
     "imageAlt": "Calendula botanicals",
