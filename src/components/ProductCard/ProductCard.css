@@ -131,13 +131,14 @@
     .product-media {
         position: relative;
         left: 0;
-        top: -20px;
+        top: -40px;
         max-width: none;
         max-height: none;
         width: 100%;
         overflow: hidden;
         justify-items: center;
         align-items: center;
+        border-radius: 0px;
     }
 
     .product-media img {

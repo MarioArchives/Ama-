@@ -46,8 +46,15 @@ export const ProductDetail = ({ productTitle, onClose }: ProductDetailProps) => 
 
           <div className="product-detail-info">
             <h2>{product.title}</h2>
-            {product.scientificName && (
-              <p className="scientific-name">{product.scientificName}</p>
+            {(product.scientificName || product.scientistName) && (
+              <p className="scientific-name">
+                {product.scientificName && (
+                  <span className="scientific-name__species">{product.scientificName}</span>
+                )}
+                {product.scientistName && (
+                  <span className="scientific-name__authority"> {product.scientistName}</span>
+                )}
+              </p>
             )}
 
             <p className="description">{product.description}</p>
