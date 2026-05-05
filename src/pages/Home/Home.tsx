@@ -27,11 +27,39 @@ export const Home = () => {
     ];
 
     useEffect(() => {
-        const timer = window.setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
+        let cancelled = false;
 
-        return () => window.clearTimeout(timer);
+        const preloadImage = (src: string) =>
+            new Promise<void>((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve();
+                img.onerror = () => resolve();
+                img.src = src;
+            });
+
+        const fontsReady =
+            typeof document !== "undefined" && "fonts" in document
+                ? document.fonts.ready.then(() => undefined)
+                : Promise.resolve();
+
+        const maxWait = new Promise<void>((resolve) => {
+            window.setTimeout(resolve, 8000);
+        });
+
+        const resourcesReady = Promise.all([
+            ...slides.map((slide) => preloadImage(slide.src)),
+            fontsReady,
+        ]).then(() => undefined);
+
+        Promise.race([resourcesReady, maxWait]).then(() => {
+            if (!cancelled) {
+                setIsLoading(false);
+            }
+        });
+
+        return () => {
+            cancelled = true;
+        };
     }, []);
 
     if (isLoading) {
