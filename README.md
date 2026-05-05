@@ -3,6 +3,12 @@
 > **Live site:** https://ama-skincare.org/
 >
 > **Screenshot:**
+<p align="center">
+<img width="523" height="935" alt="Screenshot From 2026-05-05 21-57-07" src="https://github.com/user-attachments/assets/4cf932d5-3893-417f-873e-b2363a7e2165" />
+</p>
+
+
+
 
 Marketing site for **Ama**, a small skincare studio sourcing botanicals grown in Lancaster, England and the Colombian Amazon. The site presents the brand, its principles, and the current product catalogue (Cacay, Sacha Inchi, and Calendula) — a minimal, responsive, multi-page rebuild aimed at letting the catalogue be edited from a single data file without touching components.
 
